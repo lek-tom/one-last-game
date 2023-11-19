@@ -13,4 +13,7 @@ Gra z grami statysytczno-losowo-zręcznościowymi
 9. Folder Components służy do przechowywania komponentów
 10. Folder Pages służy do przechowywania podstron
 11. Te repo moze nie byc ostateczne lecz to co zostanie napisane nie pójdzie w zapomnienie. Być może uda się znaleźć lepszą metodę do tworzenia i ogranizacji projektu.
-    
+12*. Jeśli kod przejdzie review to można dodać na nowego brancha z przedrostkiem pre-main- np: pre-main-login
+
+    *Należy poddać dyskusji przemyśleniu
+Na koniec zaznaczam, że z roziwjaniem naszych umiejętnośći wszystko co jest napisane powyżej może ulec zmianie
