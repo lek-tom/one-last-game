@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-import '../SCSS/Registration.scss';
+import './styles.module.scss';
 
 function Login() {
     return (

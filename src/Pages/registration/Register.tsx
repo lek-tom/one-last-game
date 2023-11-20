@@ -1,6 +1,5 @@
-// Register component
-import '../SCSS/Registration.scss';
 import {Link} from 'react-router-dom';
+import './styles.module.scss';
 
 function Register() {
     return (
