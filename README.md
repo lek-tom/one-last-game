@@ -7,7 +7,7 @@ Gra z grami statysytczno-losowo-zręcznościowymi
 3. Frontend w React z typescript, scss
 4. Zmienne scss są zapisywane używając podłóg np: "className={styles.style_div_tablica}>"
 5. Zmienne typescript typów, klas, funkcji camelCase, zmienne podkreślenia
-6. Backend w spring
+6. Backend
 7. Package magager to Yarn
 8. App.tsx to strona główna
 9. Folder Components służy do przechowywania komponentów
