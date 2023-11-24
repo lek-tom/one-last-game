@@ -1,0 +1,1 @@
+declare type ReactChildren = React.JSX.Element | React.JSX.Element[] | string;
