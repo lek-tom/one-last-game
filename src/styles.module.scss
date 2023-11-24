@@ -1,7 +1,24 @@
-.div_test1 {
-  background-color: blueviolet;
+// nie dziala stylowanie niczego w customowych elementach
+$darkBackgroundColor: rgb(26, 44, 56);
+$lightBackgroundColor: rgb(37, 60, 75);
+$fontColor: rgb(236, 225, 225);
 
-  .div_test2 {
-    background-color: crimson;
+.no_select {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+link {text-decoration: none;}
+link:hover {text-decoration: none;}
+link:visited {text-decoration: none;}
+link:active {text-decoration: none;}
+
+.holder {
+  background-color: $darkBackgroundColor;
+  color: $fontColor;
+
+  .navbar {
+    background-color: $lightBackgroundColor;
   }
 }
