@@ -1,7 +1,6 @@
 import {Link} from "react-router-dom";
 import styles from "./styles.module.scss";
 
-
 export type NavbarElementProps = {
     children: ReactChildren;
     link?: string | undefined;

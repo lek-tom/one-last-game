@@ -3,6 +3,10 @@ import Navbar, { NavbarMain, NavbarElement, NavbarRow } from "./components/navba
 import Footer, {FooterSection, FooterSectionHeader, FooterSectionElement, FooterColumn, FooterMain, FooterBottom, FooterAdditionalText, FooterCaption, FooterCaptionElement} from "./components/footer/index"
 import {BrowserRouter} from "react-router-dom";
 
+// usunac styled components bo moze sie nie przydadza tak samo jak zapominiałem
+// linka i wszystkie elementy nava/footera mozna wystylowac className ale nie tego cel, nie po to styluje je w ich reactowym kodzie by znów stlyować je tam, gdzie je uzwywa
+// główny tag footer i navbar powoien przyjmować jeden argument którym będzie przedrostek nazwy klasy która będzie użwywana
+// np: <Navbar className={styles.main_navbar}> i ten main_ będzie dodawany do każdego elementu w tej klasie czyli: styles.main_navbar_element etc.
 function App() {
 
   return (
@@ -12,7 +16,7 @@ function App() {
           <Navbar>
             <NavbarMain>
               <NavbarRow>
-                <NavbarElement link={"https://stake.com"}>
+                <NavbarElement link={"https://stake.com"} className={styles.link}>
                   Stake
                 </NavbarElement>
                 <NavbarElement link={"https://bandit.camp"}>

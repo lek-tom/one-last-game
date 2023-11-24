@@ -9,10 +9,11 @@ $fontColor: rgb(236, 225, 225);
   user-select: none;
 }
 
-link {text-decoration: none;}
-link:hover {text-decoration: none;}
-link:visited {text-decoration: none;}
-link:active {text-decoration: none;}
+.link {text-decoration: none;}
+.link:hover {text-decoration: none;}
+.link:visited {text-decoration: none;}
+.link:active {text-decoration: none;}
+.link {color: #FFFFFF;}
 
 .holder {
   background-color: $darkBackgroundColor;
