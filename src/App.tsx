@@ -1,15 +1,31 @@
-import styles from "./styles.module.scss"
+//import styles from "./styles.module.scss";
+import Navbar, { NavbarMain, NavbarElement, NavbarRow } from "./components/navbar/index";
+import {BrowserRouter} from "react-router-dom";
 
 function App() {
 
   return (
-    <div className={styles.div_test1}>
-        <h1>Test1</h1>
-        <div className={styles.div_test2}>
-            <h2>Test2</h2>
-        </div>
-    </div>
-  )
+    <BrowserRouter>
+      <Navbar>
+        <NavbarMain>
+          <NavbarRow>
+            <NavbarElement link={"https://stake.com"}>
+              Stake
+            </NavbarElement>
+            <NavbarElement link={"https://bandit.camp"}>
+              BanditCamp
+            </NavbarElement>
+            <NavbarElement>
+              Link 3
+            </NavbarElement>
+            <NavbarElement>
+              Link 4
+            </NavbarElement>
+          </NavbarRow>
+        </NavbarMain>
+      </Navbar>
+    </BrowserRouter>
+    )
 }
 
 export default App
