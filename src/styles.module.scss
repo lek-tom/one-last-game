@@ -19,7 +19,11 @@ $fontColor: rgb(236, 225, 225);
   background-color: $darkBackgroundColor;
   color: $fontColor;
 
-  .navbar {
+  .navbar_main_page {
     background-color: $lightBackgroundColor;
+  }
+
+  .navbar_main_main_page {
+    background-color: #AFDE99;
   }
 }

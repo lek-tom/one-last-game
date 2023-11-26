@@ -3,20 +3,17 @@ import Navbar, { NavbarMain, NavbarElement, NavbarRow } from "./components/navba
 import Footer, {FooterSection, FooterSectionHeader, FooterSectionElement, FooterColumn, FooterMain, FooterBottom, FooterAdditionalText, FooterCaption, FooterCaptionElement} from "./components/footer/index"
 import {BrowserRouter} from "react-router-dom";
 
-// usunac styled components bo moze sie nie przydadza tak samo jak zapominiałem
-// linka i wszystkie elementy nava/footera mozna wystylowac className ale nie tego cel, nie po to styluje je w ich reactowym kodzie by znów stlyować je tam, gdzie je uzwywa
-// główny tag footer i navbar powoien przyjmować jeden argument którym będzie przedrostek nazwy klasy która będzie użwywana
-// np: <Navbar className={styles.main_navbar}> i ten main_ będzie dodawany do każdego elementu w tej klasie czyli: styles.main_navbar_element etc.
+// do rozważenia - czy robić class prefix w głównej częsci navbara i footera czy innych komponentów czy stylować je na bieżąco - trzba poddać dyskusji
+
 function App() {
 
   return (
     <div className={styles.holder}>
-
       <BrowserRouter>
-          <Navbar>
-            <NavbarMain>
+          <Navbar className={styles.navbar_main_page}>
+            <NavbarMain className={styles.navbar_main_main_page}>
               <NavbarRow>
-                <NavbarElement link={"https://stake.com"} className={styles.link}>
+                <NavbarElement link={"https://stake.com"}>
                   Stake
                 </NavbarElement>
                 <NavbarElement link={"https://bandit.camp"}>
