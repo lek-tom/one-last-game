@@ -5,13 +5,14 @@ export type NavbarElementProps = {
     children: ReactChildren;
     link?: string | undefined;
     [key: string]: unknown;
-    className?: string;
 }
 
-export function NavbarElement({children, link = undefined, className, ...props}: NavbarElementProps) {
+export function NavbarElement({children, link = undefined, ...props}: NavbarElementProps) {
     return (
-        <Link className={`${styles}${className}`} to={link ?? ""} {...props}>
-            {children}
-        </Link>
+        <div className={styles.navbar_element}>
+            <Link to={link ?? ""} {...props}>
+                {children}
+            </Link>
+        </div>
     );
 }

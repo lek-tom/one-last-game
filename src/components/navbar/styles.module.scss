@@ -1,0 +1,18 @@
+@import "../../variables";
+
+.navbar {
+    background-color: $--dark2-Background-color;
+    padding: 1rem;
+
+    .navbar_row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar_element a {
+        text-decoration: none;
+        color: $--font-color;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}

@@ -6,12 +6,11 @@ import {BrowserRouter} from "react-router-dom";
 // do rozważenia - czy robić class prefix w głównej częsci navbara i footera czy innych komponentów czy stylować je na bieżąco - trzba poddać dyskusji
 
 function App() {
-
   return (
     <div className={styles.holder}>
       <BrowserRouter>
-          <Navbar className={styles.navbar_main_page}>
-            <NavbarMain className={styles.navbar_main_main_page}>
+          <Navbar>
+            <NavbarMain>
               <NavbarRow>
                 <NavbarElement link={"https://stake.com"}>
                   Stake

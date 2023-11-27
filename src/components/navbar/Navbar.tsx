@@ -2,12 +2,11 @@ import styles from "./styles.module.scss"
 
 export type NavbarProps = {
     children: ReactChildren;
-    className?: string;
 } 
 
-function Navbar({children, className, ...props}: NavbarProps) {
+function Navbar({children, ...props}: NavbarProps) {
     return (
-        <div {...props} className={`${styles}${className}`}>{children}</div>
+        <div {...props} className={styles.navbar}>{children}</div>
     );
 }
 
