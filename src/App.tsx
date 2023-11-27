@@ -3,8 +3,6 @@ import Navbar, { NavbarMain, NavbarElement, NavbarRow } from "./components/navba
 import Footer, {FooterSection, FooterSectionHeader, FooterSectionElement, FooterColumn, FooterMain, FooterBottom, FooterAdditionalText, FooterCaption, FooterCaptionElement} from "./components/footer/index"
 import {BrowserRouter} from "react-router-dom";
 
-// do rozważenia - czy robić class prefix w głównej częsci navbara i footera czy innych komponentów czy stylować je na bieżąco - trzba poddać dyskusji
-
 function App() {
   return (
     <div className={styles.holder}>

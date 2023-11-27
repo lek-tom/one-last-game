@@ -1,21 +1,8 @@
 @import "./variables";
 
-.no_select {
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
 
 .holder {
-  background-color: $--dark--background-color;
+  background-color: $--dark-background-color;
   color: $--font-color;
-  height: 100%;
-
-  .navbar_main_page {
-    background-color: $--dark2-Background-color;
-  }
-
-  .navbar_main_main_page {
-    background-color: #AFDE99;
-  }
+  height: 100vh;
 }

@@ -6,7 +6,7 @@ type FooterProps = {
 
 function Footer({children, ...props}: FooterProps) {
     return (
-        <div className={styles.Footer} {...props}>{children}</div>
+        <div className={styles.footer} {...props}>{children}</div>
     );
 }
 
