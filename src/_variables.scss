@@ -1,3 +1,11 @@
 $--dark-background-color: rgb(26, 44, 56);
 $--dark2-background-color: rgb(37, 60, 75);
 $--font-color: rgb(236, 225, 225);
+$--font-size-normal: 1rem;
+$--font-size-header: 1.5rem;
+$--navbar-height: 3rem;
+$--navbar-padding-y: 0rem;
+$--footer-heigth: 12rem;
+$--footer-padding-y: 1rem;
+// czemu 1 rem ponizej? czemu odstaje na dole wolna przestrzeń? jak to zrobi by by dynamiczne
+$--main-page-hieght: calc(100vh - #{$--navbar-height} - #{$--footer-heigth} + #{$--footer-padding-y} - 1rem)

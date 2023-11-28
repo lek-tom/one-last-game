@@ -26,20 +26,20 @@ function App() {
             </NavbarMain>
           </Navbar>
         </BrowserRouter>
-
+    <div className={styles.main_space}></div>
       <BrowserRouter>
         <Footer>
             <FooterMain>
                 <FooterColumn>
                     <FooterSection>
                         <FooterSectionHeader link={"https://mylink.com"}>
-                            Example section
+                            Secton 1 
                         </FooterSectionHeader>
                         <FooterSectionElement link={"https://mylink.com"}>
                             link 1
                         </FooterSectionElement>
                         <FooterSectionElement link={"https://mylink.com"}>
-                            link 2
+                            link 2d
                         </FooterSectionElement>
                         <FooterSectionElement link={"https://mylink.com"}>
                             link 3
@@ -49,24 +49,22 @@ function App() {
                 <FooterColumn>
                     <FooterSection>
                         <FooterSectionHeader link={"https://mylink.com"}>
-                            Example section 2
+                           Secton 2
                         </FooterSectionHeader>
                         <FooterSectionElement link={"https://mylink.com"}>
-                            link 1
+                            link 4
                         </FooterSectionElement>
                         <FooterSectionElement link={"https://mylink.com"}>
-                            link 2
+                            link 5
                         </FooterSectionElement>
                         <FooterSectionElement link={"https://mylink.com"}>
-                            link 3
+                            link 6
                         </FooterSectionElement>
                     </FooterSection>
                 </FooterColumn>
             </FooterMain>
             <FooterBottom>
-                <FooterAdditionalText link={"https://mylink.com"}>
-                    Text us or sth
-                </FooterAdditionalText>
+               {/* mysle ze footer additioanl text nie jest potrzeby ale narazie zostawie plik i mijesce jego */}
                 <FooterCaption>
                     <FooterCaptionElement link={"https://mylink.com"}>
                         Copyright
@@ -86,3 +84,6 @@ function App() {
 }
 
 export default App
+
+
+

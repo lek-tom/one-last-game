@@ -4,29 +4,33 @@
     background-color: $--dark2-background-color;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-
+    
+    // styling links 
     .footer_section_element, .footer_section_header, .footer_caption_element, .footer_caption_header, .footer_additional_text {
-        text-decoration: none;
         color: $--font-color;
+        text-decoration: none;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        //do usuniecia pozniej
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        // do usunicia pozniej
     }
+
     .footer_main {
         display: flex;
-        justify-content: space-between;
+        padding: $--footer-padding-y;
         
+        //styling everything in columns 
         .footer_column {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        
+            //mam przeczucie ze te paddingi ponizej to nie jest dobre rozwiazanie
+            padding-left: 1rem;
+            padding-right: 8rem;        
         
             .footer_section {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
-            
                 
                 .footer_section_header {
                     font-weight: bold;
@@ -35,11 +39,19 @@
             }
         }
     }
-    
+    // text on bottom of footer is stled belowe
     .footer_bottom {
         display: flex;
-        justify-content: space-between;
         align-items: center;
         margin-top: 20px;
+        padding: 1rem;
+
+        .footer_caption {
+            padding-right: 1rem;
+
+            .footer_caption_element {
+                padding: 0 1rem;
+            }
+        }
     }
 }
