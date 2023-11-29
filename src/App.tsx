@@ -1,7 +1,9 @@
 import styles from "./styles.module.scss";
 import Navbar, { NavbarMain, NavbarElement, NavbarRow } from "./components/navbar/index";
-import Footer, {FooterSection, FooterSectionHeader, FooterSectionElement, FooterColumn, FooterMain, FooterBottom, FooterAdditionalText, FooterCaption, FooterCaptionElement} from "./components/footer/index"
-import {BrowserRouter} from "react-router-dom";
+import Footer, {FooterSection, FooterSectionHeader, FooterSectionElement, FooterColumn, FooterMain, FooterBottom, FooterAdditionalText, FooterCaption, FooterCaptionElement} from "./components/footer/index";
+import DropdownMenu, {DropdownMenuMain, DropdownMenuColumn, DropdownMenuElement} from "./components/dropdown/index";
+import { BrowserRouter } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
   return (
@@ -10,23 +12,34 @@ function App() {
           <Navbar>
             <NavbarMain>
               <NavbarRow>
-                <NavbarElement link={"https://stake.com"}>
-                  Stake
+                <NavbarElement>
+                  <DropdownMenu text="Ustawienia">
+                    <DropdownMenuMain>
+                      <DropdownMenuColumn>
+                        <DropdownMenuElement link={"pornhub.com/gay"}>
+                          Moje ublubione filmiki
+                        </DropdownMenuElement>
+                        <DropdownMenuElement link={"youtube.com"}>
+                          Youtub
+                        </DropdownMenuElement>
+                        <DropdownMenuElement link={"x.com"}>
+                          Ptasznik
+                        </DropdownMenuElement>
+                      </DropdownMenuColumn>
+                    </DropdownMenuMain>
+                  </DropdownMenu>
                 </NavbarElement>
                 <NavbarElement link={"https://bandit.camp"}>
                   BanditCamp
-                </NavbarElement>
-                <NavbarElement>
-                  Link 3
-                </NavbarElement>
-                <NavbarElement>
-                  Link 4
                 </NavbarElement>
               </NavbarRow>
             </NavbarMain>
           </Navbar>
         </BrowserRouter>
-    <div className={styles.main_space}></div>
+    <div className={styles.main_space}>
+
+
+    </div>
       <BrowserRouter>
         <Footer>
             <FooterMain>
@@ -64,7 +77,7 @@ function App() {
                 </FooterColumn>
             </FooterMain>
             <FooterBottom>
-               {/* mysle ze footer additioanl text nie jest potrzeby ale narazie zostawie plik i mijesce jego */}
+               {/* mysle ze footer additioanl text nie jest potrzeby ale narazie zostawie plik i mijesce jego*/}
                 <FooterCaption>
                     <FooterCaptionElement link={"https://mylink.com"}>
                         Copyright

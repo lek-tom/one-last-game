@@ -4,6 +4,7 @@
     background-color: $--dark2-background-color;
     display: flex;
     flex-direction: column;
+    font-size: $--font-size-normal;
     
     // styling links 
     .footer_section_element, .footer_section_header, .footer_caption_element, .footer_caption_header, .footer_additional_text {
@@ -25,7 +26,7 @@
         .footer_column {
             //mam przeczucie ze te paddingi ponizej to nie jest dobre rozwiazanie
             padding-left: 1rem;
-            padding-right: 8rem;        
+            padding-right: 6rem;        
         
             .footer_section {
                 display: flex;
@@ -35,6 +36,7 @@
                 .footer_section_header {
                     font-weight: bold;
                     margin-bottom: 10px;
+                    font-size: $--font-size-header;
                 }
             }
         }

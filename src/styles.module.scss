@@ -3,6 +3,7 @@
 .holder {
   background-color: $--dark-background-color;
   color: $--font-color;
+  overflow: hidden;
   
   .main_space {
     height: $--main-page-hieght;
