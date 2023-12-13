@@ -1,0 +1,15 @@
+@import "../../variables";
+
+.holder_hover {
+   margin-top: 3.4rem;
+   background-color: $--cool-gray;
+
+
+   .drop_down_menu_element {
+      padding: 0 1rem;
+   }
+   
+   .drop_down_menu_element a:hover {
+      color: $--hover-color;
+   }
+}

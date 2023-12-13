@@ -5,19 +5,27 @@ export type DropdownMenuProps = {
     children: ReactChildren;
     text?: string;
 }
-// return chlidren if usestate returnes false if trr  return text
+
 function DropdownMenu({children, text = undefined, ...props}: DropdownMenuProps) {
-    const [dropdownClicked, setDropdownClicked] = useState(false);
-    
-    const handleClick = () => {
-        setDropdownClicked(!dropdownClicked);
-        console.log("Dropdown clicked: ", dropdownClicked )
-    }
+    const [dropped, setDropped] = useState(false);
 
-    return( 
-        <div onClick={() => console.log('Clicked!')} className={styles.drop_down_menu_not_dropped}>{text}</div>
+    return(
+        <div className={`${styles.holder} ${dropped ? styles.holder_hover : ''} `}
+            onMouseEnter={() => setDropped(true)}
+            onMouseLeave={() => setDropped(false)}
+        >
+            <div 
+                className={styles.drop_down_menu_not_dropped}
+            >
+                {text}
+            </div>
+            {dropped && (
+                <div {...props} className={styles.drop_down_menu_dropped}>{children}</div>
+            )}
+
+            {/* dodaj link do chikdren, przeleciec przez wszystkie elementy tego i tam lin? */}
+        </div>
     );
-
 }
 
 export default DropdownMenu;

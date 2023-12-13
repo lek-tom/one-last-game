@@ -25,10 +25,13 @@
             user-select: none;
             //do usuniecia pozniej
             text-decoration: none;
-            padding: 4rem;
             color: $--font-color;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
-    }
 
+        .navbar_element {
+            margin: 2rem;
+        }
+
+    }
 }

@@ -3,9 +3,10 @@ import Navbar, { NavbarMain, NavbarElement, NavbarRow } from "./components/navba
 import Footer, {FooterSection, FooterSectionHeader, FooterSectionElement, FooterColumn, FooterMain, FooterBottom, FooterAdditionalText, FooterCaption, FooterCaptionElement} from "./components/footer/index";
 import DropdownMenu, {DropdownMenuMain, DropdownMenuColumn, DropdownMenuElement} from "./components/dropdown/index";
 import { BrowserRouter } from "react-router-dom";
-import { useState } from "react";
 
 function App() {
+  // problem jest szerokosc elementow navbara jeden z aszeroki i nie wysoki
+  //trzeba dorobic by text zostawal po najechaniu tylko ze nizej sie tworzy nowy box poniezj z elemtnami ale najechanie dziala
   return (
     <div className={styles.holder}>
       <BrowserRouter>
@@ -17,7 +18,7 @@ function App() {
                     <DropdownMenuMain>
                       <DropdownMenuColumn>
                         <DropdownMenuElement link={"pornhub.com/gay"}>
-                          Moje ublubione filmiki
+                          Filmiki
                         </DropdownMenuElement>
                         <DropdownMenuElement link={"youtube.com"}>
                           Youtub

@@ -10,3 +10,5 @@ $--footer-padding-y: 1rem;
 //costam z paddingiem i romziqrem czcionki
 // czemu 1 rem ponizej? czemu odstaje na dole wolna przestrzeń? jak to zrobi by by dynamiczne
 $--main-page-hieght: calc(100vh - #{$--navbar-height} - #{$--footer-heigth} + #{$--footer-padding-y});
+$--cool-gray: rgb(33,33,33);
+$--hover-color: #FAC000;
