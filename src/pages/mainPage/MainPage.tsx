@@ -6,11 +6,11 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Login from "../registration/Login";
 
 function MainPage() {
+// nie dziala routing z dropdowna w navbarze i ogolnie router gdy probuje dodac link jako komponent wywala albo nie dziala pomocy picahl
+
   return (
     <div className={styles.holder}>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={
             <Navbar>
               <NavbarMain>
                 <NavbarRow>
@@ -21,10 +21,10 @@ function MainPage() {
                           <DropdownMenuElement link={"instagram.com"}>
                             Filmiki
                           </DropdownMenuElement>
-                          <DropdownMenuElement link={"youtube.com"}>
+                          <DropdownMenuElement link={"https://youtube.com"}>
                             Youtub
                           </DropdownMenuElement>
-                          <DropdownMenuElement link={"x.com"}>
+                          <DropdownMenuElement>
                             Ptasznik
                           </DropdownMenuElement>
                         </DropdownMenuColumn>
@@ -40,8 +40,6 @@ function MainPage() {
                 </NavbarRow>
               </NavbarMain>
             </Navbar>
-          }/>
-        </Routes>
       </BrowserRouter>
     <div className={styles.main_space}>
 
@@ -68,10 +66,10 @@ function MainPage() {
                 <FooterColumn>
                     <FooterSection>
                         <FooterSectionHeader link={"https://mylink.com"}>
-                           Secton 2
+                          Secton 2
                         </FooterSectionHeader>
                         <FooterSectionElement link={"https://mylink.com"}>
-                            link 4
+                          link 4
                         </FooterSectionElement>
                         <FooterSectionElement link={"https://mylink.com"}>
                             link 5

@@ -8,11 +8,15 @@ export type DropdownMenuElementProps = {
 }
 
 export function DropdownMenuElement({children, link = undefined, ...props}: DropdownMenuElementProps) {
+    const isExternal = link?.startsWith('http://') || link?.startsWith('https://');
+
+    const content = isExternal
+        ? <a href={link} {...props}>{children}</a>
+        : <Link to={link ?? ""} {...props}>{children}</Link>;
+
     return (
         <div className={styles.drop_down_menu_element}>
-            <Link to={link ?? ""} {...props}>
-                {children}
-            </Link>
+            {content}
         </div>
     );
 }

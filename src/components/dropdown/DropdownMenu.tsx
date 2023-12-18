@@ -14,16 +14,10 @@ function DropdownMenu({children, text = undefined, ...props}: DropdownMenuProps)
             onMouseEnter={() => setDropped(true)}
             onMouseLeave={() => setDropped(false)}
         >
-            <div 
-                className={styles.drop_down_menu_not_dropped}
-            >
-                {text}
-            </div>
+            <div className={styles.drop_down_menu_not_dropped}>{text}</div>
             {dropped && (
                 <div {...props} className={styles.drop_down_menu_dropped}>{children}</div>
             )}
-
-            {/* dodaj link do chikdren, przeleciec przez wszystkie elementy tego i tam lin? */}
         </div>
     );
 }

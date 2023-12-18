@@ -1,12 +1,14 @@
 @import "../../variables";
 
 .holder_hover {
-   margin-top: 3.4rem;
    background-color: $--cool-gray;
-
+   transform: translate(0, 42%);
 
    .drop_down_menu_element {
-      padding: 0 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.3rem 0;
    }
    
    .drop_down_menu_element a:hover {
