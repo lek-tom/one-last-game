@@ -1,10 +1,7 @@
 import styles from "./styles.module.scss";
 import Navbar, { NavbarMain, NavbarElement, NavbarRow } from "../../components/navbar/index";
-import Footer, {FooterSection, FooterSectionHeader, FooterSectionElement, FooterColumn, FooterMain, FooterBottom, FooterAdditionalText, FooterCaption, FooterCaptionElement} from "../../components/footer/index";
+import Footer, {FooterSection, FooterSectionHeader, FooterSectionElement, FooterColumn, FooterMain, FooterBottom, FooterCaption, FooterCaptionElement} from "../../components/footer/index";
 import DropdownMenu, {DropdownMenuMain, DropdownMenuColumn, DropdownMenuElement} from "../../components/dropdown/index";
-import {BrowserRouter, Routes, Route} from "react-router-dom";
-import Login from "../registration/Login/Login";
-import Register from "../registration/Register/Register";
 
 function MainPage() {
 // nie dziala routing z dropdowna w navbarze i ogolnie router gdy probuje dodac link jako komponent wywala albo nie dziala pomocy picahl
@@ -16,28 +13,48 @@ function MainPage() {
             <NavbarMain>
               <NavbarRow>
                 <NavbarElement>
-                  <DropdownMenu text="Ustawienia">
+                  Welcome
+                </NavbarElement>
+                <NavbarElement>
+                  News and Updates
+                </NavbarElement>
+                <NavbarElement>
+                <DropdownMenu text="Resources">
                     <DropdownMenuMain>
                       <DropdownMenuColumn>
-                        <DropdownMenuElement link={"https://instagram.com"}>
-                          Filmiki
-                        </DropdownMenuElement>
-                        <DropdownMenuElement link={"https://youtube.com"}>
-                          {/* zepsuly sie linki i na nie najezdzanie */}
-                          Jutub
+                        <DropdownMenuElement >
+                          Propability Theory
                         </DropdownMenuElement>
                         <DropdownMenuElement>
-                          Ptasznik
+                          Game Strategies
+                        </DropdownMenuElement>
+                        <DropdownMenuElement >
+                          Video Lessons
+                        </DropdownMenuElement>
+                        <DropdownMenuElement>
+                          Theoretical exercises
+                        </DropdownMenuElement>
+                        <DropdownMenuElement >
+                          Upcoming events
+                        </DropdownMenuElement>
+                        <DropdownMenuElement>
+                          Past Elements
                         </DropdownMenuElement>
                       </DropdownMenuColumn>
                     </DropdownMenuMain>
                   </DropdownMenu>
                 </NavbarElement>
-                <NavbarElement link={"https://bandit.camp"}>
-                  BanditCamp
+                <NavbarElement>
+                  tu bedzie przerwa keidys
                 </NavbarElement>
-                <NavbarElement link="/login">
-                  Login
+                <NavbarElement>
+                  Wallet
+                </NavbarElement>
+                <NavbarElement>
+                  Account
+                </NavbarElement>
+                <NavbarElement>
+                  Settings
                 </NavbarElement>
               </NavbarRow>
             </NavbarMain>
@@ -49,36 +66,88 @@ function MainPage() {
           <FooterMain>
               <FooterColumn>
                   <FooterSection>
-                      <FooterSectionHeader link={"https://mylink.com"}>
-                          Secton 1 
+                      <FooterSectionHeader>
+                        About Us
                       </FooterSectionHeader>
-                      <FooterSectionElement link={"https://mylink.com"}>
-                          link 1
+                      <FooterSectionElement>
+                        Our Mission
                       </FooterSectionElement>
-                      <FooterSectionElement link={"https://mylink.com"}>
-                          link 2d
+                      <FooterSectionElement>
+                        Our Team
                       </FooterSectionElement>
-                      <FooterSectionElement link={"https://mylink.com"}>
-                          link 3
+                      <FooterSectionElement>
+                        Contact
                       </FooterSectionElement>
                   </FooterSection>
               </FooterColumn>
               <FooterColumn>
                   <FooterSection>
-                      <FooterSectionHeader link={"https://mylink.com"}>
-                        Secton 2
+                      <FooterSectionHeader>
+                        Legal
                       </FooterSectionHeader>
-                      <FooterSectionElement link={"https://mylink.com"}>
-                        link 4
+                      <FooterSectionElement>
+                        Privacy Policy
                       </FooterSectionElement>
-                      <FooterSectionElement link={"https://mylink.com"}>
-                          link 5
+                      <FooterSectionElement>
+                        Terms of Service
                       </FooterSectionElement>
-                      <FooterSectionElement link={"https://mylink.com"}>
-                          link 6
+                      <FooterSectionElement>
+                        FAQ
                       </FooterSectionElement>
                   </FooterSection>
               </FooterColumn>
+              <FooterColumn>
+                  <FooterSection>
+                      <FooterSectionHeader>
+                        Navigation
+                      </FooterSectionHeader>
+                      <FooterSectionElement>
+                        Site Map
+                      </FooterSectionElement>
+                      <FooterSectionElement>
+                        Disclaimers
+                      </FooterSectionElement>
+                      <FooterSectionElement>
+                        Accesibility
+                      </FooterSectionElement>
+                  </FooterSection>
+              </FooterColumn>
+              <FooterColumn>
+                  <FooterSection>
+                      <FooterSectionHeader>
+                        Find Us
+                      </FooterSectionHeader>
+                      <FooterSectionElement>
+                        Facebook
+                      </FooterSectionElement>
+                      <FooterSectionElement>
+                        Instagram
+                      </FooterSectionElement>
+                      <FooterSectionElement>
+                        Twitter
+                      </FooterSectionElement>
+                      <FooterSectionElement>
+                        Hub
+                      </FooterSectionElement>
+                  </FooterSection>
+              </FooterColumn>
+              <FooterColumn>
+                  <FooterSection>
+                      <FooterSectionHeader>
+                        Partenrships
+                      </FooterSectionHeader>
+                      <FooterSectionElement>
+                        Our partners
+                      </FooterSectionElement>
+                      <FooterSectionElement>
+                        Become an Affiliate
+                      </FooterSectionElement>
+                      <FooterSectionElement>
+                        Sponsorships
+                      </FooterSectionElement>
+                  </FooterSection>
+              </FooterColumn>
+
           </FooterMain>
           <FooterBottom>
               {/* mysle ze footer additioanl text nie jest potrzeby ale narazie zostawie plik i mijesce jego*/}
@@ -100,39 +169,3 @@ function MainPage() {
 }
 
 export default MainPage;
-
-//const App = () => {
-//   return (
-//     <Router>
-//         <Navbar />
-//         <Switch>
-//             <Route exact path="/" component={Home} />
-//             <Route path="/portfolio" component={Portfolio} />
-//             <Route path="/services" component={Services} />
-//             <Route path="/about" component={About} />
-//         </Switch>
-//     </Router>
-// );
-// }
-
-// const Navbar = () => {
-//   const [show, setShow] = useState(true);
-
-//   const handleShow = () => {
-//       setShow(current => !current);
-//   }
-
-//   return (
-//       <header>
-//           <div className="logo">Company</div>
-//           <div id={show && 'd-menu'} className='display-menu'>
-//               <Link className='menu' to="/">Home</Link>
-//               <Link className='menu' to="/portfolio">Portfolio</Link>
-//               <Link className='menu' to="/services">Services</Link>
-//               <Link className='menu' to="/about">About</Link>
-//           </div>
-//           <button onClick={handleShow} className='toggle'><MenuIcon /></button>
-//       </header>
-//   );
-// }
-

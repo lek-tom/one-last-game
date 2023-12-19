@@ -8,6 +8,7 @@
     // background-color: rgb(200, 20, 200);
     color: $--font-color;
     font-size: $--font-size-normal;
+    // dac trzy ostatnie nth of type na koniec
 
     .navbar_main {
 
@@ -31,6 +32,10 @@
 
         .navbar_element {
             margin: 2rem;
+
+            a:hover {
+                color: $--hover-color;
+            }
         }
 
     }

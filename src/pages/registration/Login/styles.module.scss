@@ -1,8 +1,10 @@
-// css do logowania 
-@import "../../variables";
+// css for login 
+@import "../../../variables";
 
 .holder {
   display: flex;
+  justify-content: center;
+  
   background-color: $--dark-background-color;
   height: 100vh;
   color: $--font-color;
