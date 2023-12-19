@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom';
 import './styles.module.scss';
+import Login from './Login';
 
 function Register() {
     return (

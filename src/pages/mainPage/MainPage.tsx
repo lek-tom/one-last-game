@@ -4,6 +4,7 @@ import Footer, {FooterSection, FooterSectionHeader, FooterSectionElement, Footer
 import DropdownMenu, {DropdownMenuMain, DropdownMenuColumn, DropdownMenuElement} from "../../components/dropdown/index";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Login from "../registration/Login";
+import Register from "../registration/Register";
 
 function MainPage() {
 // nie dziala routing z dropdowna w navbarze i ogolnie router gdy probuje dodac link jako komponent wywala albo nie dziala pomocy picahl
@@ -23,7 +24,7 @@ function MainPage() {
                         </DropdownMenuElement>
                         <DropdownMenuElement link={"https://youtube.com"}>
                           {/* zepsuly sie linki i na nie najezdzanie */}
-                          Youtub
+                          Jutub
                         </DropdownMenuElement>
                         <DropdownMenuElement>
                           Ptasznik
@@ -42,10 +43,7 @@ function MainPage() {
             </NavbarMain>
           </Navbar>
   <div className={styles.main_space}>
-    <Routes>
-        <Route path="/" element={<MainPage/>}/>
-        <Route path="/login" element={<Login/>}/>
-      </Routes>
+
   </div>
       <Footer>
           <FooterMain>
