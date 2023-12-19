@@ -1,5 +1,6 @@
-import {Link} from "react-router-dom";
+import {Link, Routes} from "react-router-dom";
 import styles from "./styles.module.scss";
+import { BrowserRouter as Route } from "react-router-dom";
 
 export type DropdownMenuElementProps = {
     children: ReactChildren;
@@ -8,15 +9,13 @@ export type DropdownMenuElementProps = {
 }
 
 export function DropdownMenuElement({children, link = undefined, ...props}: DropdownMenuElementProps) {
-    const isExternal = link?.startsWith('http://') || link?.startsWith('https://');
+        return (
+            <div className={styles.drop_down_menu_element}>
+                <Link to={link ?? ""} {...props}> 
+                    {children}
+                </Link>
+            </div>
+        );
+    }
 
-    const content = isExternal
-        ? <a href={link} {...props}>{children}</a>
-        : <Link to={link ?? ""} {...props}>{children}</Link>;
 
-    return (
-        <div className={styles.drop_down_menu_element}>
-            {content}
-        </div>
-    );
-}

@@ -1,11 +1,10 @@
 import {Link} from "react-router-dom";
 import styles from "./styles.module.scss";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 
 export type NavbarElementProps = {
     children: ReactChildren;
-    link?: string | React.ReactElement | undefined;
+    link?: string | undefined;
     [key: string]: unknown;
 }
 
