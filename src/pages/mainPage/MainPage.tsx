@@ -3,8 +3,8 @@ import Navbar, { NavbarMain, NavbarElement, NavbarRow } from "../../components/n
 import Footer, {FooterSection, FooterSectionHeader, FooterSectionElement, FooterColumn, FooterMain, FooterBottom, FooterAdditionalText, FooterCaption, FooterCaptionElement} from "../../components/footer/index";
 import DropdownMenu, {DropdownMenuMain, DropdownMenuColumn, DropdownMenuElement} from "../../components/dropdown/index";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import Login from "../registration/Login";
-import Register from "../registration/Register";
+import Login from "../registration/Login/Login";
+import Register from "../registration/Register/Register";
 
 function MainPage() {
 // nie dziala routing z dropdowna w navbarze i ogolnie router gdy probuje dodac link jako komponent wywala albo nie dziala pomocy picahl
