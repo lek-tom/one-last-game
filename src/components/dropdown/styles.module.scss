@@ -1,0 +1,18 @@
+@import "../../variables";
+
+.holder_hover {
+   background-color: $--cool-gray;
+   transform: translate(0, 42%);
+
+   .drop_down_menu_element {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.2rem;
+   }
+   
+   .drop_down_menu_element a:hover {
+      color: $--hover-color;
+   }
+}
+
