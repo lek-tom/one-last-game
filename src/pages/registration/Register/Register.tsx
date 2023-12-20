@@ -52,7 +52,6 @@ function Register() {
         };
         
         navigate("/")
-    }
 
     return (
 
