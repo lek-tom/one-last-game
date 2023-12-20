@@ -5,7 +5,7 @@ import models
 from sqlalchemy.orm import sessionmaker
 
 app = FastAPI()
-
+#bro did NOT cook anything
 Session = sessionmaker(bind=models.engine)
 session = Session()
 

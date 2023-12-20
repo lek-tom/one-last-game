@@ -28,18 +28,20 @@ class UserCreate(BaseModel):
     surname: str
     phone_number: str
     password: str
+    sex: str
 
 
 class User(Base):
     __tablename__ = "users"
 
-    user_id: Mapped[Integer] = Column("user_id", UUIDType(binary=False), primary_key=True, default=uuid4, index=True)
+    user_id: Mapped[uuid] = Column("user_id", UUIDType(binary=False), primary_key=True, default=uuid4, index=True)
 
     email: Mapped[String] = mapped_column("email", String, nullable=False, unique=True)
     name: Mapped[String] = mapped_column("name", String, nullable=False)
     surname: Mapped[String] = mapped_column("surname", String, nullable=False)
     phone_number: Mapped[String] = mapped_column("phone_number", String, nullable=False, unique=True)
     password: Mapped[String] = mapped_column("password", String, nullable=False)
+    sex: Mapped[String] = mapped_column("sex", String, nullable=False)
 
     def __init__(self, user_id, email, name, surname, phone_number, password):
         self.user_id = user_id
@@ -61,7 +63,7 @@ class User(Base):
 class Task(Base):
     __tablename__ = "tasks"
 
-    task_id: Mapped[Integer] = mapped_column("task_id", Integer, primary_key=True, index=True, default=generate_uuid())
+    task_id: Mapped[uuid] = mapped_column("task_id", Integer, primary_key=True, index=True, default=generate_uuid())
     created: Mapped[String] = mapped_column("created", String, nullable=False)
     updated: Mapped[String] = mapped_column("updated", String, nullable=False)
     priority: Mapped[String] = mapped_column("priority", String, nullable=False)
