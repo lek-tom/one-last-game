@@ -8,6 +8,11 @@
     
     // styling links 
     .footer_section_element, .footer_section_header, .footer_caption_element, .footer_caption_header, .footer_additional_text {
+
+        &:hover, a:hover {
+            color: $--hover-color;
+        }
+        
         color: $--font-color;
         text-decoration: none;
         //do usuniecia pozniej

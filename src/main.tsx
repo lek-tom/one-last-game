@@ -6,6 +6,7 @@ import { Routes, Route} from 'react-router-dom'
 import Login from './pages/registration/Login/Login.tsx'
 import MainPage from './pages/mainPage/MainPage.tsx'
 import Register from './pages/registration/Register/Register.tsx'
+import Mines from './pages/mines/Mines.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -14,6 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Route path="/" element={<MainPage/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>
+          <Route path='/mines' element={<Mines/>}/>
         </Routes>
     </BrowserRouter>
   </React.StrictMode>,
