@@ -1,0 +1,42 @@
+@import "../../variables";
+
+.navbar {
+    background-color: $--dark2-background-color;
+    display: flex;
+    height: $--navbar-height;
+    align-items: center;
+    // background-color: rgb(200, 20, 200);
+    color: $--font-color;
+    font-size: $--font-size-normal;
+    // dac trzy ostatnie nth of type na koniec
+
+    .navbar_main {
+
+        .navbar_row {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    
+        .navbar_element a {
+            //do suuniecia pozniej
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            //do usuniecia pozniej
+            text-decoration: none;
+            color: $--font-color;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .navbar_element {
+            margin: 2rem;
+
+            a:hover {
+                color: $--hover-color;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,13 @@
+@import "./variables";
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $--font-family;
+}
+
+.no_select {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

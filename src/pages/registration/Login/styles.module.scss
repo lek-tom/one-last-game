@@ -1,0 +1,44 @@
+// css for login 
+@import "../../../variables";
+
+.holder {
+  display: flex;
+  justify-content: center;
+  
+  background-color: $--dark-background-color;
+  height: 100vh;
+  color: $--font-color;
+  font-family: $--font-family;
+
+  a{
+    color: $--link-color;
+    text-decoration: none;
+    //do usuniecia pozniej
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .signUp, .logIn {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    .input {
+      background-color: lightgray;
+      width: 20vw;
+      margin: 0.5rem auto;
+      text-align: center;
+      padding: 0.3rem;
+      border-radius: 1rem;
+      font-size: 1.5rem;
+      
+    }
+  }
+
+}

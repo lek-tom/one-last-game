@@ -1,15 +1,18 @@
+import MainPage from "./pages/mainPage/MainPage";
 import styles from "./styles.module.scss"
+import Login from "./pages/registration/Login/Login";
+import Register from "./pages/registration/Register/Register";
+import { BrowserRouter as Routes, Route } from "react-router-dom";
 
 function App() {
-
   return (
-    <div className={styles.div_test1}>
-        <h1>Test1</h1>
-        <div className={styles.div_test2}>
-            <h2>Test2</h2>
-        </div>
-    </div>
-  )
+      <div className={styles.holder}>
+        <Register/>
+      </div>
+    );
 }
 
 export default App
+
+
+
