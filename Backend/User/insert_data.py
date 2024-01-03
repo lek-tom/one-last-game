@@ -21,7 +21,7 @@ app.add_middleware(
 @app.post("/login/register")
 async def create_user(user: Request, db: AsyncSession = Depends(models.get_db)):
     print(user)
-    db_user = models.User(**user.model_dump())
+    db_user = models.User(user.json())
     db.add(db_user)
     await db.commit()
     await db.refresh(db_user)
