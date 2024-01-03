@@ -43,13 +43,14 @@ class User(Base):
     password: Mapped[String] = mapped_column("password", String, nullable=False)
     sex: Mapped[String] = mapped_column("sex", String, nullable=False)
 
-    def __init__(self, user_id, email, name, surname, phone_number, password):
+    def __init__(self, user_id, email, name, surname, phone_number, password, sex):
         self.user_id = user_id
         self.email = email
         self.name = name
         self.surname = surname
         self.phone_number = phone_number
         self.password = password
+        self.sex = sex
 
     def dict(self):
         return {
