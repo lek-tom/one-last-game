@@ -28,6 +28,7 @@
         //przekierowanie po signup moze nie dzialaac bo ejst asycn
 
         async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+            
             e.preventDefault();
         
             if (formState.password !== formState.repPassword) {
@@ -35,14 +36,16 @@
                 return;
             }
         
+            const { repPassword, ...formStateWithoutRepPassword } = formState;
+
             try {
                 const response = await fetch('http://localhost:8000/login/register', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formState),
-                });
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formStateWithoutRepPassword),
+            });
         
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);

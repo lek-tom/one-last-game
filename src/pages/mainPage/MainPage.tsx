@@ -3,7 +3,7 @@ import Navbar, { NavbarMain, NavbarElement, NavbarRow } from "../../components/n
 import Footer, {FooterSection, FooterSectionHeader, FooterSectionElement, FooterColumn, FooterMain, FooterBottom, FooterCaption, FooterCaptionElement} from "../../components/footer/index";
 import DropdownMenu, {DropdownMenuMain, DropdownMenuColumn, DropdownMenuElement} from "../../components/dropdown/index";
 import NavbarMainPage from "../../components_premade/NavbarMainPage";
-import FooterMainPage from "../../components_premade/FooterMainPAge";
+import FooterMainPage from "../../components_premade/FooterMainPage";
 
 
 function MainPage() {
