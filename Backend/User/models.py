@@ -61,25 +61,25 @@ class User(Base):
         }
 
 
-class Task(Base):
-    __tablename__ = "tasks"
-
-    task_id: Mapped[uuid] = mapped_column("task_id", Integer, primary_key=True, index=True, default=generate_uuid())
-    created: Mapped[String] = mapped_column("created", String, nullable=False)
-    updated: Mapped[String] = mapped_column("updated", String, nullable=False)
-    priority: Mapped[String] = mapped_column("priority", String, nullable=False)
-    status: Mapped[String] = mapped_column("status", String, nullable=False)
-    task: Mapped[String] = mapped_column("task", String, nullable=False)
-    user_id: Mapped[Integer] = mapped_column("user_id", Integer, ForeignKey("users.user_id"))
-
-    def dict(self):
-        return {
-            "id": self.task_id,
-            "created": self.created,
-            "status": self.status,
-            "task": self.task,
-            "user_id": self.user_id,
-        }
+# class Task(Base):
+#     __tablename__ = "tasks"
+#
+#     task_id: Mapped[uuid] = mapped_column("task_id", Integer, primary_key=True, index=True, default=generate_uuid())
+#     created: Mapped[String] = mapped_column("created", String, nullable=False)
+#     updated: Mapped[String] = mapped_column("updated", String, nullable=False)
+#     priority: Mapped[String] = mapped_column("priority", String, nullable=False)
+#     status: Mapped[String] = mapped_column("status", String, nullable=False)
+#     task: Mapped[String] = mapped_column("task", String, nullable=False)
+#     user_id: Mapped[Integer] = mapped_column("user_id", Integer, ForeignKey("users.user_id"))
+#
+#     def dict(self):
+#         return {
+#             "id": self.task_id,
+#             "created": self.created,
+#             "status": self.status,
+#             "task": self.task,
+#             "user_id": self.user_id,
+#         }
 
 
 async def get_db():
