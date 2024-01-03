@@ -1,8 +1,8 @@
-from uuid import uuid4
-
-from fastapi import FastAPI, Depends, Request
+from fastapi import FastAPI, Depends, Request, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 from starlette.middleware.cors import CORSMiddleware
+from starlette.responses import JSONResponse
+
 import models
 from sqlalchemy.orm import sessionmaker
 
@@ -20,12 +20,18 @@ app.add_middleware(
 )
 
 
-@app.post("/insert_data")
-async def create_user(user: Request, db: AsyncSession = Depends(models.get_db)):
-    print(user)
-    db_user = models.User(user_id=uuid4, email=user.get("email"), name=user.get("name"), surname=user.get("surname"), password=user.get("password"), phone_number=user.get("phone_number"), sex=user.get("sex"))
+@app.post("/login/register")
+async def create_user(request: Request, db: AsyncSession = Depends(models.get_db)):
+    data = await request.json()
+    print(data)
+    user_data = models.UserCreate.model_validate(data)
+
+    if len(user_data.surname) < 3:
+        raise HTTPException(status_code=400, detail="Surname must be at least 3 characters long.")
+
+    db_user = models.User(**user_data.model_dump())
     db.add(db_user)
     await db.commit()
     await db.refresh(db_user)
 
-    return db_user
+    return JSONResponse(content={"Success": "User created successfully"}, status_code=200)

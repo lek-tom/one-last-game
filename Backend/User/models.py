@@ -1,9 +1,10 @@
 import uuid
+from typing import Optional
 
 from sqlalchemy import String, Integer, ForeignKey
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 from sqlalchemy.orm import declarative_base, Mapped, mapped_column
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, String
 from pydantic import BaseModel, EmailStr
 from uuid import uuid4
 
@@ -22,11 +23,11 @@ Base = declarative_base()
 
 
 class UserCreate(BaseModel):
-    user_id: uuid.UUID = uuid4()
+    user_id: Optional[uuid.UUID] = None
     email: EmailStr
     name: str
     surname: str
-    phone_number: str
+    phoneNumber: str
     password: str
     sex: str
 
@@ -39,16 +40,16 @@ class User(Base):
     email: Mapped[String] = mapped_column("email", String, nullable=False, unique=True)
     name: Mapped[String] = mapped_column("name", String, nullable=False)
     surname: Mapped[String] = mapped_column("surname", String, nullable=False)
-    phone_number: Mapped[String] = mapped_column("phone_number", String, nullable=False, unique=True)
+    phoneNumber: Mapped[String] = mapped_column("phoneNumber", String, nullable=False, unique=True)
     password: Mapped[String] = mapped_column("password", String, nullable=False)
     sex: Mapped[String] = mapped_column("sex", String, nullable=False)
 
-    def __init__(self, user_id, email, name, surname, phone_number, password, sex):
+    def __init__(self, user_id, email, name, surname, phoneNumber, password, sex):
         self.user_id = user_id
         self.email = email
         self.name = name
         self.surname = surname
-        self.phone_number = phone_number
+        self.phoneNumber = phoneNumber
         self.password = password
         self.sex = sex
 
