@@ -18,7 +18,7 @@ app.add_middleware(
 )
 
 
-@app.post("/login/register")
+@app.post("/insert_data")
 async def create_user(user: Request, db: AsyncSession = Depends(models.get_db)):
     print(user)
     db_user = models.User(email=user.get("email"), name=user.get("name"), surname=user.get("surname"), password=user.get("password"), phone_number=user.get("phone_number"), sex=user.get("sex"))
